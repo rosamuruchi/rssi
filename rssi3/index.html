@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Author: https://www.linkedin.com/in/david-ramos-penott-05a472133/ -->
+  <!-- Author: https://github.com/d4v1d41 -->
+  <meta charset="utf-8">
+  <title>Tecoar - RSSI 2.0</title>
+  <meta name="description" content="JSMaps - Responsive Javascript Maps - http://jsmaps.io">
+  <meta name="author" content="LGLab">
+
+  <!-- Demo scripts -->
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      -moz-transform: scale(0.8, 0.8); /* Moz-browsers */
+      zoom: 0.8; /* Other non-webkit browsers */
+      zoom: 80%; /* Webkit browsers */
+      font-family: 'Droid Sans', sans-serif;
+      background:#f2f2f2;
+      font-size:14px;
+      line-height:21px;
+    }
+
+    .container {
+      width: 960px;
+      margin:20px auto;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1000px) {
+      .container {
+        width: 768px;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .container {
+        width: 420px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .container {
+        width: 300px;
+      }
+    }
+
+    a img {
+      border:none;
+    }
+
+    h1, h2, h3, h4, h5, h6{ 
+      font-weight:normal; 
+    }
+    h1{ 
+      font-size:26px; 
+      line-height:32px; 
+    }
+    p, ul{
+      margin-bottom:10px;
+    }
+    #logo {
+      position:absolute;
+      left:0;
+      top:0;
+    }
+    #logo img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 100%;
+      box-shadow: 0 0 0 0.1em #ffffff;
+    }
+    #logo h1 {
+      margin-left: 11%
+    }
+    #logo p {
+      margin-left: 2%
+    }
+
+  </style>
+  <!-- End Demo scripts -->
+
+  <!-- Jquery is required, embed on your page if not already - don't embed 2 versions -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <!-- End Jquery -->
+
+  <!-- Map scripts - add the below to your page -->
+  <!-- jsmaps-panzoom.js is optional if you are using enablePanZoom -->
+  <link href="jsmaps/jsmaps.css" rel="stylesheet" type="text/css" />
+  <script src="jsmaps/jsmaps-libs.js" type="text/javascript"></script>
+  <script src="jsmaps/jsmaps-panzoom.js"></script>
+  <script src="jsmaps/jsmaps.min.js" type="text/javascript"></script>
+  <script src="maps/argentina.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  
+  <!-- End Map scripts -->
+
+</head>
+
+<body>
+          <div id="logo"><span class="avatar"><a href="../"><img src="./images/avatar.jpg" alt="" /></a></span>
+                    <h1 id="avatar_text_h1">Tecoar</h1>
+                    <p class="avatar_text">Estadisticas de RSSI</p>
+                    <p><a href="./IDC/welcome.php" class="btn btn-danger">Ingresar Datos</a></p>
+
+</div>
+  <div class="container">
+
+    <!-- Map html - add the below to your page -->
+    <div class="jsmaps-wrapper" id="argentina-map" style="margin-left: 35%;"></div>
+    <!-- End Map html -->
+  </div>
+
+  <script type="text/javascript">
+
+    $(function() {
+      
+      $('#argentina-map').JSMaps({
+        map: 'argentina'
+      });
+
+    });
+    
+  </script>
+  
+</body>
+
+</html>
